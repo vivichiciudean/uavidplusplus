@@ -155,3 +155,9 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+/* palette strip */
+.strip{display:flex;height:8px;border-radius:5px;overflow:hidden;max-width:560px;margin:26px auto 0;
+  box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.strip span{flex:1}

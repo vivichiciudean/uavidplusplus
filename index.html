@@ -6,9 +6,7 @@
         content="A short starter to build website for your paper.">
   <meta name="keywords" content="Paper, website">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TODO Window title</title> <!-- the browser tab will display this text -->
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>UAVid++</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -50,69 +48,59 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">TODO: Title of your paper</h1>
+          <h1 class="title is-1 publication-title">UAVid++: Higher-Quality Labels and Expanded Semantic Taxonomy for Aerial Semantic Segmentation</h1>
           <div class="is-size-5 publication-authors">
-
-            <!-- TODO: modify authors, affiliations and personal websites-->
+            <span class="author-block">
+              <a href="https://users.utcluj.ro/~vivianc/">Vivian Chiciudean</a>,</span>
 
             <span class="author-block">
-              <a href="https://www.dfki.de/web/ueber-uns/mitarbeiter/person/TODO">TODO Author1 Name</a><sup>1</sup>,</span>
+              <a href="https://users.utcluj.ro/~nedevschi/">Sergiu Nedevschi</a>,</span>
 
             <span class="author-block">
-              <a href="https://www.dfki.de/web/ueber-uns/mitarbeiter/person/TODO">TODO Author2 Name</a><sup>2</sup>,</span>
-
-            <!-- change of line -->
-            <br>
-
-            <span class="author-block">
-              <a href="https://www.dfki.de/web/ueber-uns/mitarbeiter/person/TODO">TODO Author3 Name</a><sup>1,2</sup>,</span>
-
-            <span class="author-block">
-              <a href="https://www.dfki.de/web/ueber-uns/mitarbeiter/person/TODO">TODO Author4 Name</a><sup>2,1</sup>,</span>
-
+              <a href="https://users.utcluj.ro/~onigaf/">Florin Oniga</a>,</span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>German Research Center for Artificial Intelligence (DFKI), Osnabrück, Germany.</span>
-            <span class="author-block"><sup>2</sup>Osnabrück University, Institute of Computer Science, Germany.</span>
+            <span class="author-block">Department of Computer Science, Technical University of Cluj-Napoca, Romania</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
+              <!-- TODO Paper Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/TODO_ARXIV_ID"
+                <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=36"
+                   class="external-link button is-normal is-rounded is-dark">
+                   <span class="icon"> 🌐 </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- TODO PDF Link. -->
+              <span class="link-block">
+                <a href="https://users.utcluj.ro/~vivianc/#publications"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>Manuscript</span>
                 </a>
               </span>
+              </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/TODO_ARXIV_ID"
+                <a href="https://huggingface.co/datasets/vivianchiciudean/uavidplusplus"
                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
+                  <span class="icon"> 🤗 </span>
+                  <span>Dataset</span>
                 </a>
               </span>
-              <!-- Video Link. -->
               <span class="link-block">
-                <!-- TODO: replace with your own video YouTube link -->
-                <a href=" https://youtu.be/4-GgOg2nuGE"
+                <a href="https://huggingface.co/datasets/vivianchiciudean/uavidplusplus"
                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
+                  <span class="icon"> 🤗 </span>
+                  <span>Weights</span>
                 </a>
               </span>
-              <!-- Code Link. -->
               <span class="link-block">
-                <!-- TODO: replace with your own github paper code link -->
-                <a href="https://github.com/DFKI-NI/mobipick_labs"
+                <a href="https://github.com/vivichiciudean/uavidplusplus-code"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -120,17 +108,26 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                TODO: if your paper has a dataset you can uncomment this block
-                <a href="https://github.com/todo"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
             </div>
+                    
+            <div class="strip" title="UAVid++ 11-class palette">
+              <span style="background:#000000"></span><span style="background:#800000"></span>
+              <span style="background:#804080"></span><span style="background:#008000"></span>
+              <span style="background:#808000"></span><span style="background:#400080"></span>
+              <span style="background:#C000C0"></span><span style="background:#404000"></span>
+              <span style="background:#0000FF"></span><span style="background:#80FFFF"></span>
+              <span style="background:#464646"></span>
+            </div>
+
+
+              <!-- impact line (from the conclusion) -->
+          <div class="columns is-centered" style="margin-top:1.5rem;">
+            <div class="column is-four-fifths">
+              <p class="is-size-5 has-text-grey-dark" style="line-height:1.5;">
+                Refined labels, an expanded taxonomy, a more discriminative benchmark, and a baseline for aerial semantic segmentation.
+              </p>
+            </div>
+          </div>
 
           </div>
         </div>
@@ -139,23 +136,19 @@
   </div>
 </section>
 
-<!-- <section class="hero teaser">
+
+<section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img src="./static/images/UAVid++.png"
+           alt="UAVid, UAVid+ and UAVid++ annotations with segmentation performance across the three variants.">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <b>UAVid, UAVid+ and UAVid++ annotations with segmentation performance across the three variants.</b>
       </h2>
     </div>
   </div>
-</section> -->
 
-<section class="section">
+<section class="section hero is-light">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -163,71 +156,65 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            TODO_ABSTRACT Robotic task execution faces challenges due to the inconsistency between symbolic planner models and the rich control structures actually running on the robot. In this paper, we present the first physical deployment of an integrated actor-planner system that shares hierarchical operational models for both acting and planning, interleaving the Reactive Acting Engine (RAE) with an anytime UCT-like Monte Carlo planner (UPOM). We implement RAE+UPOM on a mobile manipulator in a real-world deployment for an object collection task. Our experiments demonstrate robust task execution under action failures and sensor noise, and provide empirical insights into the interleaved acting-and-planning decision making process.
+            High-quality annotated datasets are critical for semantic segmentation, particularly in aerial imagery, where the number of manually annotated frames is limited and precise labeling is often missing. To address this, we introduce <b>UAVid++, a semantically refined and expanded version of the UAVid dataset</b> for aerial semantic segmentation. The proposed dataset provides higher-quality annotations through <b>manual corrections addressing labeling errors across the entire original UAVid dataset</b>. In addition, we expand the taxonomy with <b>three finely annotated semantic classes, Water, Sky, and Roof</b>, selected to enrich the semantic space and separate visually distinct objects previously grouped together under the same label. We evaluated state-of-the-art aerial segmentation methods on UAVid, UAVid+ (with corrections, without expanded taxonomy), and the full UAVid++ dataset. Corrected annotations improved both training and evaluation performance by <b>up to 7.4% mIoU</b>, and adding the three classes further increased performance by <b>up to 4.1%</b>, demonstrating the combined impact of refined labels and the expanded semantic taxonomy. UAVid++ enables <b>more discriminative evaluation</b> of state-of-the-art methods and <b>improves their relative ranking</b>. We adapt <b>frozen DINO-pretrained ViT backbones using trainable task-specific heads</b> for UAV semantic segmentation. This strategy achieves strong segmentation performance and robust generalization while quantifying the gains from improved labels relative to pretrained backbone capacity. Relative to the best-performing state-of-the-art method, our configurations achieve a <b>2.7% mIoU improvement on UAVid++</b>, <b>up to 12.4% mIoU gains on out-of-distribution UAV datasets</b>, and a <b>38.85% mIoU gain on a cross-domain dataset</b>.
           </p>
         </div>
       </div>
     </div>
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <!-- TODO: After uploading your video to YouTube click on "share" then "Embed" then copy-paste <iframe ... </iframe> then replace sample video below -->
-          <iframe width="560" height="315"
-                  src="https://www.youtube.com/embed/4-GgOg2nuGE?si=4RbH_5X4Xn8zXEyu" title="YouTube video player"
-                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
-            </video>
-          </div>
-      </div>
-    </div>
 
 
-
-
+<section class="section" id="ACK">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgments</h2>
+        <div class="content has-text-justified">
+          <p>
+            This work was supported by the &ldquo;Romanian Hub for Artificial Intelligence &ndash; HRIA&rdquo; project, Smart Growth, Digitization and Financial Instruments Program, MySMIS no. 351416, Ministry of Investments and European Projects, Romanian Government.
+          </p>
+        </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{TODO
-  author       = {TODO_AUTHOR(S)},
-  title        = {TODO_TITLE},
-  conference   = {TODO_CONFERENCE},
-  year         = {TODO_YEAR},
+    <h2 class="title">Citation</h2>
+    <pre><code>@article{chiciudean2026uavidplusplus,
+  title   = {UAVid++: Higher-Quality Labels and Expanded Semantic Taxonomy
+             for Aerial Semantic Segmentation},
+  author  = {Chiciudean, Vivian and Nedevschi, Sergiu and Oniga, Florin},
+  journal = {IEEE Transactions on Geoscience and Remote Sensing},
+  year    = {2026},
+  note    = {Accepted for publication}
 }
-  </code></pre>
+
+@article{lyu2020uavid,
+  title={UAVid: A semantic segmentation dataset for UAV imagery},
+  author={Lyu, Ye and Vosselman, George and Xia, Gui-Song and Yilmaz, Alper and Yang, Michael Ying},
+  journal={ISPRS journal of photogrammetry and remote sensing},
+  volume={165},
+  pages={108--119},
+  year={2020},
+  publisher={Elsevier}
+}</code></pre>
   </div>
 </section>
+
 
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <!-- <a class="icon-link"
-         href="./static/files/TODO.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a> -->
-      <a class="icon-link" href="https://github.com/dfki-ni" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <center><p>
-            This website (<a href="https://github.com/DFKI-NI/TODO_ID_CONFERENCE_YEAR/">source code</a>) was adapted from the popular <a
-            href="https://nerfies.github.io">Nerfies</a> project page and is licensed under a <br><a rel="license"
-            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            UAVid++ is released under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+            Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <br>
+            
+            It is derived from the <a href="https://uavid.nl/">UAVid</a> dataset, so the use of the underlying imagery remains subject to the original
+            UAVid license.
+            This website was adapted from the <a href="https://nerfies.github.io">Nerfies</a> project page.
           </p></center>
         </div>
       </div>
