@@ -1,0 +1,134 @@
+/* ============ template (Nerfies) ============ */
+
+body{font-family:'Noto Sans',sans-serif}
+
+.link-block a{margin-top:5px;margin-bottom:5px}
+
+.teaser{font-family:'Google Sans',sans-serif}
+.teaser .hero-body{padding-top:0;padding-bottom:3rem}
+
+.publication-title{font-family:'Google Sans',sans-serif}
+.publication-authors{font-family:'Google Sans',sans-serif}
+.publication-authors a{color:hsl(204,86%,53%)}
+.publication-authors a:hover{text-decoration:underline}
+.author-block{display:inline-block}
+
+/* ============ UAVid++ sections ============ */
+
+.strip{display:flex;height:8px;border-radius:5px;overflow:hidden;max-width:850px;margin:26px auto 0;
+  box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.strip span{flex:1}
+
+.venue{font-size:.9rem;margin:14px 0 7px}
+
+.sec-line{border-top:1px solid #ededed}
+
+.section-lead{color:#7a7a7a;max-width:62ch;margin:-0.75rem auto 2rem;text-align:center}
+
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem}
+.card-grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card-grid h3{color:#363636;font-size:1.05rem;font-weight:600;margin-bottom:.5rem}
+.card-grid h3 .icon{margin-right:.35rem}
+.card-grid p{color:#4a4a4a;font-size:.95rem;line-height:1.55}
+.card-grid p b{color:#363636;font-weight:700}
+.card-grid .tag{margin-bottom:.6rem}
+
+.card-grid .box{height:100%;margin-bottom:0;
+  --hover-shadow:0 .9em 1.75em -.125em rgba(10,10,10,.15);
+  transition:transform .18s ease-out,box-shadow .18s ease-out}
+.card-grid .box:hover{transform:translateY(-4px);
+  box-shadow:var(--hover-shadow),0 0 0 1px rgba(10,10,10,.02)}
+.card-grid a.box:hover{box-shadow:var(--hover-shadow),0 0 0 1px #3273dc}
+.card-grid a.box:active{transform:translateY(0);
+  box-shadow:inset 0 1px 2px rgba(10,10,10,.2),0 0 0 1px #3273dc}
+
+@media (prefers-reduced-motion:reduce){
+  .card-grid .box{transition:none}
+  .card-grid .box:hover{transform:none}
+}
+
+.badges{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.badges .tag{height:auto;padding:.45em .8em;white-space:normal;text-align:center;line-height:1.4}
+
+.chip{display:inline-block;flex:0 0 auto;width:16px;height:16px;margin-right:.5rem;
+  border-radius:4px;border:1px solid rgba(0,0,0,.2);vertical-align:-2px}
+
+.taxonomy{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.5rem}
+.taxonomy .swatch{display:flex;align-items:center;padding:.45rem .65rem;background:#fff;
+  border:1px solid #dbdbdb;border-radius:5px;font-size:.85rem;color:#363636}
+.new{margin-left:auto;padding:1px 6px;border-radius:999px;background:#257942;
+  color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.04em}
+
+/* 11-class taxonomy: 4 / 4 / 3 with the short row centred (desktop only) */
+@media screen and (min-width:1024px){
+  .taxonomy{display:flex;flex-wrap:wrap;justify-content:center}
+  .taxonomy .swatch{flex:0 0 calc(25% - .38rem)}
+}
+
+.table-caption{color:#7a7a7a;font-size:.85rem;line-height:1.5;margin-bottom:.75rem}
+.table-caption b{color:#363636}
+.table-note{color:#7a7a7a;font-size:.85rem;line-height:1.5;margin-top:.75rem}
+.table-slim{max-width:600px;margin:0 auto}
+
+.table.res-table th,.table.res-table td{text-align:center;vertical-align:middle}
+.table.res-table tbody th,.table.res-table td.lab{text-align:left;white-space:nowrap}
+.table.res-table td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.table.res-table tbody tr.row-hl th,.table.res-table tbody tr.row-hl td{background:#f5f5f5}
+.table.res-table td.best,.table.res-table tbody tr.row-hl td.best{background:#effaf3;font-weight:700}
+
+.table.res-table th.grp{font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;
+  color:#7a7a7a;font-weight:700;border-bottom-width:1px;padding-bottom:.4em}
+.table.res-table th.sep,.table.res-table td.sep{border-left:2px solid #dbdbdb}
+
+.table.table-dense th,.table.table-dense td{font-size:.8rem;padding:.3em .4em}
+
+.gain{color:#257942;font-weight:700;font-size:.78em;white-space:nowrap}
+.gain::before{content:"\25B2";margin-right:.15em;font-size:.8em}
+
+
+/* ============ label compare (What Changed) ============ */
+
+.cmp{max-width:1152px;margin:0 auto}
+
+.cmp-scenes{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;margin-bottom:1.25rem}
+.cmp-scene{appearance:none;-webkit-appearance:none;font:inherit;font-size:.85rem;cursor:pointer;
+  padding:.35rem .95rem;border:1px solid #dbdbdb;border-radius:999px;background:#fff;color:#4a4a4a;
+  transition:background .15s,border-color .15s,color .15s}
+.cmp-scene:hover{border-color:#b5b5b5;color:#363636}
+.cmp-scene.is-active{background:#363636;border-color:#363636;color:#fff}
+.cmp-scene:focus-visible{outline:2px solid #3273dc;outline-offset:2px}
+
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:start}
+.cmp-panel{margin:0}
+
+.cmp-frame{position:relative;aspect-ratio:16/9;background:#101014;border-radius:8px;
+  overflow:hidden;box-shadow:0 2px 12px rgba(10,10,10,.14)}
+.cmp-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  user-select:none;-webkit-user-drag:none}
+
+/* the wipe: UAVid++ underneath, UAVid clipped on top from the left */
+.cmp-wipe{cursor:ew-resize;touch-action:pan-y}
+.cmp-a{clip-path:inset(0 50% 0 0)}
+
+.cmp-tag{position:absolute;top:10px;padding:.26rem .55rem;border-radius:5px;white-space:nowrap;
+  background:rgba(16,16,20,.72);color:#fff;font-size:.7rem;letter-spacing:.02em;pointer-events:none;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:opacity .15s}
+.cmp-tag-l{left:10px}
+.cmp-tag-r{right:10px}
+.cmp-tag b{color:#fff;font-weight:700}
+.cmp-tag i{font-style:normal;opacity:.6}
+
+.cmp-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;margin-left:-1px;background:#fff;
+  box-shadow:0 0 0 1px rgba(10,10,10,.35);cursor:ew-resize;touch-action:none;outline:none}
+.cmp-handle::before{content:"";position:absolute;top:0;bottom:0;left:-16px;right:-16px}
+.cmp-grip{position:absolute;top:50%;left:50%;width:34px;height:34px;margin:-17px 0 0 -17px;
+  border-radius:50%;background:#fff;box-shadow:0 1px 6px rgba(10,10,10,.4);color:#363636;
+  font-size:.72rem;line-height:34px;text-align:center;letter-spacing:-.06em}
+.cmp-handle:focus-visible .cmp-grip{box-shadow:0 0 0 3px #3273dc}
+
+.cmp-cap{margin-top:.55rem;font-size:.78rem;color:#7a7a7a;line-height:1.5}
+.cmp-cap b{color:#363636;font-weight:600}
+
+@media screen and (max-width:768px){
+  .cmp-grid{grid-template-columns:1fr}
+}

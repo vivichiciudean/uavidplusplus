@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Higher-Quality Labels and Expanded Semantic Taxonomy for Aerial Semantic Segmentation">
+  <meta name="keywords" content="Paper, website">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UAVid++</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('a[href^="http"]').forEach(function(a){
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
+  });
+</script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">UAVid++: Higher-Quality Labels and Expanded Semantic Taxonomy for Aerial Semantic Segmentation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://users.utcluj.ro/~vivianc/">Vivian Chiciudean</a>,</span>
+
+            <span class="author-block">
+              <a href="https://users.utcluj.ro/~nedevschi/">Sergiu Nedevschi</a>,</span>
+
+            <span class="author-block">
+              <a href="https://users.utcluj.ro/~onigaf/">Florin Oniga</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Department of Computer Science, Technical University of Cluj-Napoca, Romania
+            </span>
+          </div>
+
+          <p class="venue">Accepted to <b><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=36">IEEE Transactions on Geoscience and Remote Sensing (TGRS)</a></b>, 2026</p>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- TODO Paper Link. -->
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/document/11614898"
+                   class="external-link button is-normal is-rounded is-dark">
+                   <span class="icon"> 🌐 </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- TODO PDF Link. -->
+              <span class="link-block">
+                <a href="https://users.utcluj.ro/~vivianc/papers/TGRS_2026.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Preprint</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/vivianchiciudean/uavidplusplus"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"> 🤗 </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/vivichiciudean/uavidplusplus-code"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/vivianchiciudean/uavidplusplus"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"> 🤗 </span>
+                  <span>Weights</span>
+                </a>
+              </span>
+            </div>
+                    
+            <div class="strip" title="UAVid++ 11-class palette">
+              <span style="background:#000000"></span><span style="background:#800000"></span>
+              <span style="background:#804080"></span><span style="background:#008000"></span>
+              <span style="background:#808000"></span><span style="background:#400080"></span>
+              <span style="background:#C000C0"></span><span style="background:#404000"></span>
+              <span style="background:#0000FF"></span><span style="background:#80FFFF"></span>
+              <span style="background:#464646"></span>
+            </div>
+
+          <div class="columns is-centered" style="margin-top:1.5rem;">
+            <div class="column is-four">
+              <p class="is-size-4 has-text-grey-dark" style="line-height:1.5;">
+                <b>TLDR:</b> Refined labels, an expanded taxonomy, a more discriminative benchmark, and a baseline for aerial semantic segmentation.
+              </p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="teaser" style="margin-top:-2rem;">
+    <div class="container is-max-widescreen">
+      <div class="cmp" id="label-compare"></div>
+    </div>
+</section>  
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            High-quality annotated datasets are critical for semantic segmentation, particularly in aerial imagery, where the number of manually annotated frames is limited and precise labeling is often missing. To address this, we introduce <b>UAVid++, a semantically refined and expanded version of the UAVid dataset</b> for aerial semantic segmentation. The proposed dataset provides higher-quality annotations through <b>manual corrections addressing labeling errors</b> across the entire original UAVid dataset. In addition, we expand the taxonomy with <b>three finely annotated semantic classes, Water, Sky, and Roof</b>, selected to enrich the semantic space and separate visually distinct objects previously grouped together under the same label. We evaluated state-of-the-art aerial segmentation methods on UAVid, UAVid+ (with corrections, without expanded taxonomy), and the full UAVid++ dataset. Corrected annotations improved both training and evaluation performance by <b>up to 7.4% mIoU</b>, and adding the three classes further increased performance by <b>up to 4.1%</b>, demonstrating the combined impact of refined labels and the expanded semantic taxonomy. UAVid++ enables <b>more discriminative evaluation</b> of state-of-the-art methods and <b>improves their relative ranking</b>. We adapt <b>frozen DINO-pretrained ViT backbones using trainable task-specific heads for UAV semantic segmentation</b>. This strategy achieves strong segmentation performance and robust generalization while quantifying the gains from improved labels relative to pretrained backbone capacity. Relative to the best-performing state-of-the-art method, our configurations achieve a <b>2.7% mIoU improvement on UAVid++</b>, up to <b>12.4% mIoU gains on out-of-distribution UAV datasets</b>, and a <b>38.85% mIoU gain on a cross-domain dataset</b>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section sec-line" id="contributions">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Contributions</h2>
+    <div class="card-grid cols-2">
+      <div class="box">
+        <h3>Refined and expanded dataset</h3>
+        <p><b>Labeling errors and coarse contours are manually corrected</b> across the entire UAVid dataset, and <b>the taxonomy is expanded from 8 to 11 classes</b> to improve semantic separability and reduce unlabeled regions.</p>    
+      </div>
+      <div class="box">
+        <h3>A more informative benchmark</h3>
+        <p>Five state-of-the-art methods re-trained and re-evaluated on every variant, where corrections alone add up to <b>+7.4% mIoU</b> and the expanded taxonomy a further <b>+4.1%</b>. They cluster near <b>69% mIoU</b> on the original UAVid, but <b>UAVid++ produces a wider distribution of scores and improves their relative ranking</b>.</p>
+      </div>
+      <div class="box">
+        <h3>DINO ViT adaptation strategy</h3>
+        <p>Lightweight trainable heads on a frozen DINO-pretrained ViT backbone reach <b>82.04% mIoU</b> on UAVid++, <b>+2.7%</b> over the best state-of-the-art method. They also generalize well, gaining up to <b>+12.4%</b> on unseen UAV datasets and <b>+38.85%</b> on cross-domain satellite imagery.</p>
+      </div>
+      <div class="box">
+        <h3>Quantifying labels vs backbone capacity</h3>
+        <p>Better labels are worth <b>+9.2% mIoU</b>, while scaling the frozen backbone from 840M to 6.7B parameters yields only <b>+0.6%</b>. For aerial imagery, where annotated data is limited, label quality matters far more than backbone size.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-widescreen">
+    <div class="hero-body">
+      <img src="./static/images/UAVid++.png"
+           alt="UAVid, UAVid+ and UAVid++ annotations with segmentation performance across the three variants.">
+      <h2 class="subtitle has-text-centered">
+        <b>UAVid, UAVid+ and UAVid++ annotations with segmentation performance across the three variants.</b>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section sec-line" id="dataset">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">The Dataset</h2>
+    <p class="section-lead">Two new variants derived from the same 420 annotated frames of UAVid, so corrections and the expanded taxonomy can be measured separately.</p>
+
+    <div class="card-grid">
+      <div class="box">
+        <span class="tag is-dark">baseline</span>
+        <h3>UAVid</h3>
+        <p>The original oblique-view aerial dataset with 8 semantic classes.</p>
+      </div>
+      <div class="box">
+        <span class="tag is-info">corrected</span>
+        <h3>UAVid+</h3>
+        <p>Corrected annotations only, across the same 8 categories as UAVid.</p>
+      </div>
+      <div class="box">
+        <span class="tag is-success">corrected and expanded</span>
+        <h3>UAVid++</h3>
+        <p>Corrected annotations and new classes. Water, Sky and Roof are added to the refined labels, bringing the taxonomy to 11 categories.</p>
+      </div>
+    </div>
+
+    <h3 class="title is-5 has-text-centered mt-5">The 11-class semantic taxonomy</h3>
+    <div class="taxonomy">
+      <div class="swatch"><span class="chip" style="background:#000000"></span>Background Clutter</div>
+      <div class="swatch"><span class="chip" style="background:#800000"></span>Building (Wall)</div>
+      <div class="swatch"><span class="chip" style="background:#804080"></span>Road</div>
+      <div class="swatch"><span class="chip" style="background:#008000"></span>Tree</div>
+      <div class="swatch"><span class="chip" style="background:#808000"></span>Low Vegetation</div>
+      <div class="swatch"><span class="chip" style="background:#400080"></span>Dynamic Car</div>
+      <div class="swatch"><span class="chip" style="background:#C000C0"></span>Static Car</div>
+      <div class="swatch"><span class="chip" style="background:#404000"></span>Human</div>
+    </div>
+
+    <div class="card-grid mt-5">
+      <div class="box">
+        <h3><span class="chip" style="background:#0000FF"></span>Water <span class="new">NEW</span></h3>
+        <p>All visible water surfaces, regardless of reflectance. Objects in the water keep their own class down to the waterline, and wet ground without pooling is not Water.</p>
+      </div>
+      <div class="box">
+        <h3><span class="chip" style="background:#80FFFF"></span>Sky <span class="new">NEW</span></h3>
+        <p>All visible sky, including clouds and haze. Backlit objects keep their own label up to their visible outline.</p>  
+      </div>
+      <div class="box">
+        <h3><span class="chip" style="background:#464646"></span>Roof <span class="new">NEW</span></h3>
+        <p>All upper surfaces of a building, plus roof-mounted equipment such as air-conditioning units and solar panels.</p>  
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sec-line" id="method">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Adapting DINO ViTs</h2>
+    <p class="section-lead">The DINO-pretrained ViT backbone stays frozen and only a lightweight head is trained on top.</p>
+
+    <div class="card-grid">
+      <div class="box">
+        <span class="tag">head (i)</span>
+        <h3>Linear probing</h3>
+        <p>A single layer mapping frozen features directly to the semantic label space. With ViT-H+ it adds only <b>~15.3K</b> trainable parameters.</p>
+      </div>
+      <div class="box">
+        <span class="tag">head (ii)</span>
+        <h3>Convolutional</h3>
+        <p>Two sequential Conv-BatchNorm-ReLU blocks, the second halving channels. <b>~22M</b> parameters when coupled with ViT-H+.</p>
+      </div>
+      <div class="box">
+        <span class="tag is-success">head (iii)</span>
+        <h3>UNet-inspired</h3>
+        <p>Three downsampling stages, a C/16 bottleneck, three upsampling stages and skip connections. <b>~26M</b> parameters with ViT-H+.</p>
+      </div>
+    </div>
+
+    <div class="badges mt-5">
+      <span class="tag is-light">Backbones: ViT-L (300M) &middot; ViT-g (1.1B) &middot; ViT-H+ (840M) &middot; ViT-7B (6.7B)</span>
+      <span class="tag is-light">Loss: weighted Cross-Entropy + Dice + weighted Boundary-Aware</span>
+      <span class="tag is-light">Pretraining: web-scale only (DINOv3 on LVD-1689M)</span>
+    </div>
+  </div>
+</section>
+
+<section class="section sec-line" id="benchmark">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Benchmark</h2>
+    <p class="section-lead">In-distribution results across the three variants. Corrected labels and the expanded taxonomy lift every method, and change how they rank against each other.</p>
+
+    <p class="table-caption"><b>Tables II &amp; III - In-distribution results on UAVid, UAVid+ and UAVid++</b> (mIoU %). Cross-evaluation between UAVid and UAVid+ exposes annotation issues in the original training and test splits; UAVid++ adds further gains through its expanded taxonomy. Green values indicate gains over UAVid.</p>
+    <div class="table-container">
+      <table class="table is-fullwidth is-narrow res-table table-dense">
+        <thead>
+          <tr>
+            <th rowspan="2">Train</th><th rowspan="2">Test</th>
+            <th colspan="5" class="grp">State of the art</th>
+            <th colspan="5" class="grp sep">Ours - frozen DINO ViT + trainable head</th>
+          </tr>
+          <tr>
+            <th>UNetFormer</th><th>LWGANet</th><th>SFA-Net</th><th>LSKNet</th><th>D2LS</th>
+            <th class="sep">ViT-g<br>UNet</th><th>ViT-H+<br>Linear</th><th>ViT-H+<br>Conv</th><th>ViT-H+<br>UNet</th><th>ViT-7B<br>UNet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>UAVid</th><td class="lab">UAVid</td>
+            <td class="num">67.87</td><td class="num">69.18</td><td class="num">69.52</td><td class="num">69.03</td><td class="num">69.68</td>
+            <td class="num sep">71.91</td><td class="num">63.17</td><td class="num">72.03</td><td class="num">72.23</td><td class="num">72.82</td>
+          </tr>
+          <tr>
+            <th>UAVid</th><td class="lab">UAVid+</td>
+            <td class="num">70.38 <span class="gain">2.5</span></td><td class="num">72.33 <span class="gain">3.1</span></td><td class="num">72.64 <span class="gain">3.1</span></td><td class="num">72.65 <span class="gain">3.6</span></td><td class="num">72.72 <span class="gain">3.0</span></td>
+            <td class="num sep">75.02 <span class="gain">3.1</span></td><td class="num">65.95 <span class="gain">2.8</span></td><td class="num">75.34 <span class="gain">3.3</span></td><td class="num">75.74 <span class="gain">3.5</span></td><td class="num">76.26 <span class="gain">3.4</span></td>
+          </tr>
+          <tr>
+            <th>UAVid+</th><td class="lab">UAVid</td>
+            <td class="num">68.38</td><td class="num">68.01</td><td class="num">70.16</td><td class="num">70.63</td><td class="num">70.94</td>
+            <td class="num sep">72.70</td><td class="num">63.19</td><td class="num">72.56</td><td class="num">73.30</td><td class="num">73.45</td>
+          </tr>
+          <tr>
+            <th>UAVid+</th><td class="lab">UAVid+</td>
+            <td class="num">72.83 <span class="gain">5.0</span></td><td class="num">73.52 <span class="gain">4.3</span></td><td class="num">75.85 <span class="gain">6.3</span></td><td class="num">76.44 <span class="gain">7.4</span></td><td class="num">76.96 <span class="gain">7.3</span></td>
+            <td class="num sep">77.83 <span class="gain">5.9</span></td><td class="num">66.29 <span class="gain">3.1</span></td><td class="num">77.96 <span class="gain">5.9</span></td><td class="num">78.67 <span class="gain">6.4</span></td><td class="num">79.41 <span class="gain">6.6</span></td>
+          </tr>
+          <tr class="row-hl">
+            <th>UAVid++</th><td class="lab">UAVid++</td>
+            <td class="num">75.07 <span class="gain">7.2</span></td><td class="num">77.66 <span class="gain">8.5</span></td><td class="num">78.43 <span class="gain">8.9</span></td><td class="num">78.61 <span class="gain">9.6</span></td><td class="num best">79.35 <span class="gain">9.7</span></td>
+            <td class="num sep">80.68 <span class="gain">8.8</span></td><td class="num">70.13 <span class="gain">6.9</span></td><td class="num">80.86 <span class="gain">8.8</span></td><td class="num">81.42 <span class="gain">9.2</span></td><td class="num best">82.04 <span class="gain">9.2</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+<p class="table-note">LSKNet ranks fourth of five on the original UAVid but second on both corrected variants, so annotation quality changes how these methods rank against each other. On UAVid++ the best configuration beats the strongest state-of-the-art method by 2.7% mIoU (82.04 vs. 79.35). Growing the frozen backbone from ViT-H+ (840M) to ViT-7B (6.7B) is worth only ~0.6%, against 9.2% from improving the data alone.</p>
+  </div>
+</section>
+
+<section class="section sec-line" id="generalization">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Generalization</h2>
+    <p class="section-lead">Trained only on UAVid++ and evaluated without any retraining on unseen UAV datasets and on high-altitude aerial and satellite imagery.</p>
+
+    <div class="table-slim">
+      <p class="table-caption"><b>Tables VII &amp; VIII - Generalization without retraining</b> (mIoU %). UDD and VDD are unseen UAV datasets; OpenEarthMap is high-altitude aerial and satellite imagery under a severe domain shift. Green values indicate gains over D2LS (SOTA).</p>
+      <div class="table-container">
+        <table class="table is-fullwidth is-narrow res-table">
+          <thead>
+            <tr><th>Test set</th><th>Method</th><th>mIoU</th></tr>
+          </thead>
+          <tbody>
+            <tr><th rowspan="3">UDD</th><td class="lab">D2LS</td><td class="num">55.46</td></tr>
+            <tr><td class="lab">ViT-H+ Linear</td><td class="num">64.58 <span class="gain">9.1</span></td></tr>
+            <tr class="row-hl"><td class="lab">ViT-H+ UNet</td><td class="num best">67.89 <span class="gain">12.4</span></td></tr>
+            <tr><th rowspan="3">VDD</th><td class="lab">D2LS</td><td class="num">60.14</td></tr>
+            <tr><td class="lab">ViT-H+ Linear</td><td class="num">65.98 <span class="gain">5.8</span></td></tr>
+            <tr class="row-hl"><td class="lab">ViT-H+ UNet</td><td class="num best">69.00 <span class="gain">8.9</span></td></tr>
+            <tr><th rowspan="2">OpenEarthMap</th><td class="lab">D2LS</td><td class="num">24.1</td></tr>
+            <tr class="row-hl"><td class="lab">ViT-H+ UNet</td><td class="num best">62.95 <span class="gain">38.85</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sec-line" id="release">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Get the Release</h2>
+    <p class="section-lead">The dataset and the implementation are publicly released for reproducibility and further research.</p>
+    <div class="card-grid">
+      <a class="box" href="https://huggingface.co/datasets/vivianchiciudean/uavidplusplus">
+        <h3><span class="icon"> 🤗 </span>Dataset</h3>
+        <p>UAVid+ and UAVid++ frames: corrected and expanded semantic annotations, with the full documentation.</p>
+      </a>
+      <a class="box" href="https://github.com/vivichiciudean/uavidplusplus-code">
+        <h3><span class="icon"><i class="fab fa-github"></i></span>Code</h3>
+        <p>The complete implementation, including the training and inference protocol, model configurations and evaluation scripts.</p>
+      </a>
+      <a class="box" href="https://huggingface.co/datasets/vivianchiciudean/uavidplusplus">
+        <h3><span class="icon"> 🤗 </span>Weights</h3>
+        <p>Checkpoints for the model configurations reported in the paper.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section sec-line" id="license">
+  <div class="container is-max-desktop content">
+    <h2 class="title">License</h2>
+        <div class="content has-text-justified">
+          <p>
+            UAVid++ is derived from the <a href="https://uavid.nl/">UAVid</a> dataset and, in accordance with
+            the ShareAlike terms of UAVid's license, is released under the same
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+            Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)</a>.
+            This website was adapted from the <a href="https://nerfies.github.io">Nerfies</a> project page.
+          </p>
+        </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX Citation</h2>
+    <pre><code>@article{chiciudean2026uavidplusplus,
+  author={Chiciudean, Vivian and Nedevschi, Sergiu and Oniga, Florin},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={UAVid++: Higher-Quality Labels and Expanded Semantic Taxonomy for Aerial Semantic Segmentation}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TGRS.2026.3715191}}
+</code></pre>
+  </div>
+</section>
+
+<section class="section" id="ACK">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgments</h2>
+        <div class="content has-text-justified">
+          <p>
+            This work was supported by the <a href="https://hria.utcluj.ro/">Romanian Hub for Artificial Intelligence &ndash; HRIA</a> project, Smart Growth, Digitization and Financial Instruments Program, MySMIS no. 351416, Ministry of Investments and European Projects, Romanian Government.
+          </p>
+        </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            2026 &middot; 
+            Vivian Chiciudean, Sergiu Nedevschi, and Florin Oniga &middot;
+            Technical University of Cluj-Napoca, Romania
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
